@@ -264,7 +264,7 @@ class ParticleFilter(InferenceModule):
         Storing your particles as a Counter (where there could be an associated
         weight with each position) is incorrect and may produce errors.
         """
-         "*** YOUR CODE HERE ***"
+        "*** YOUR CODE HERE ***"
         count = 0
         self.particles = []
         while count < self.numParticles:
@@ -353,7 +353,7 @@ class ParticleFilter(InferenceModule):
         essentially converts a list of particles into a belief distribution (a
         Counter object)
         """
-         "*** YOUR CODE HERE ***"
+        "*** YOUR CODE HERE ***"
         distribution = util.Counter()
         for element in self.particles:
             distribution[element] = distribution[element] + 1
@@ -431,7 +431,7 @@ class JointParticleFilter:
         Storing your particles as a Counter (where there could be an associated
         weight with each position) is incorrect and may produce errors.
         """
-         "*** YOUR CODE HERE ***"
+        "*** YOUR CODE HERE ***"
         possiblePos= list(itertools.product(self.legalPositions, repeat = self.numGhosts))
         random.shuffle(possiblePos)
 
@@ -557,7 +557,7 @@ class JointParticleFilter:
               (ghostAgent) will move to in the supplied gameState.  All ghosts
               must first be placed in the gameState using setGhostPositions
               above.
-              
+
               The ghost agent you are meant to supply is
               self.ghostAgents[ghostIndex-1], but in this project all ghost
               agents are always the same.
